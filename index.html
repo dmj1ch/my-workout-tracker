@@ -16,57 +16,223 @@
             --accent-orange: #f59e0b;
             --border-color: #334155; 
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-        body { background-color: var(--bg-primary); color: var(--text-main); padding: 16px; max-width: 600px; margin: 0 auto; }
-        header { text-align: center; padding: 20px 0; border-bottom: 1px solid var(--border-color); margin-bottom: 20px; }
-        header h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.025em; }
-        header p { color: var(--text-muted); font-size: 0.875rem; margin-top: 4px; }
-        .card { background-color: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px; padding: 16px; margin-bottom: 16px; }
-        h2 { font-size: 1.1rem; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; }
-        .form-group { margin-bottom: 12px; }
-        label { display: block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 4px; }
-        select, input, textarea { width: 100%; background-color: var(--bg-primary); border: 1px solid var(--border-color); color: var(--text-main); padding: 10px; border-radius: 8px; font-size: 0.95rem; outline: none; }
-        input[type="date"] { color-scheme: dark; }
-        select:focus, input:focus, textarea:focus { border-color: var(--accent-blue); }
-        .set-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
-        .btn { color: white; border: none; padding: 12px; border-radius: 8px; font-weight: 600; font-size: 0.95rem; cursor: pointer; width: 100%; transition: opacity 0.1s ease; text-align: center; display: inline-block; }
-        .btn:active { opacity: 0.8; }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            padding: 16px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            margin-top: 4px;
+        }
+
+        .card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .form-group {
+            margin-bottom: 12px;
+        }
+
+        label {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+
+        select, input, textarea {
+            width: 100%;
+            background-color: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            outline: none;
+        }
+
+        input[type="date"] {
+            color-scheme: dark; 
+        }
+
+        select:focus, input:focus, textarea:focus {
+            border-color: var(--accent-blue);
+        }
+
+        .set-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .btn {
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            width: 100%;
+            transition: opacity 0.1s ease;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .btn:active {
+            opacity: 0.8;
+        }
+
         .btn-blue { background-color: var(--accent-blue); }
         .btn-green { background-color: var(--accent-green); }
         .btn-red { background-color: var(--accent-red); }
-        .btn-small { padding: 6px 12px; font-size: 0.8rem; width: auto; border-radius: 6px; }
-        .btn-outline { background-color: transparent; border: 1px solid var(--border-color); color: var(--text-main); }
-        .btn-outline:hover { background-color: rgba(255,255,255,0.05); }
-        .action-buttons { display: flex; gap: 8px; margin-top: 12px; }
-        .history-item { border-left: 4px solid var(--accent-blue); margin-bottom: 10px; padding: 10px 12px; background: rgba(255,255,255,0.02); border-radius: 0 8px 8px 0; position: relative; }
-        .history-date { font-size: 0.8rem; color: var(--text-muted); font-weight: bold; }
-        .history-details { font-size: 0.95rem; margin-top: 4px; }
-        .badge { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; }
+        
+        .btn-small {
+            padding: 6px 12px;
+            font-size: 0.8rem;
+            width: auto;
+            border-radius: 6px;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .history-item {
+            border-left: 4px solid var(--accent-blue);
+            margin-bottom: 10px;
+            padding: 10px 12px;
+            background: rgba(255,255,255,0.02);
+            border-radius: 0 8px 8px 0;
+            position: relative;
+        }
+
+        .history-date {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: bold;
+        }
+
+        .history-details {
+            font-size: 0.95rem;
+            margin-top: 4px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
         .badge-about-right { background-color: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
         .badge-no-slowdown { background-color: rgba(59, 130, 246, 0.2); color: var(--accent-blue); }
         .badge-struggle { background-color: rgba(239, 68, 68, 0.2); color: var(--accent-red); }
         .badge-failure { background-color: rgba(245, 158, 11, 0.2); color: var(--accent-orange); }
-        .flex-container { display: flex; justify-content: space-between; align-items: center; }
-        .item-actions { display: flex; gap: 6px; margin-top: 8px; justify-content: flex-end; }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .item-actions {
+            display: flex;
+            gap: 6px;
+            margin-top: 8px;
+            justify-content: flex-end;
+        }
+
+        /* Styling for backup copy text area */
+        .backup-container {
+            display: none;
+            background-color: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 12px;
+        }
     </style>
 </head>
 <body>
+
     <header>
         <h1>⚡ Gemini Fit Tracker</h1>
         <p>Progressive Overload & Muscular Failure Logger</p>
     </header>
+
+    <!-- LOG FORM -->
     <div class="card">
         <h2 id="form-title">Log Exercise</h2>
         <form id="workout-form">
             <input type="hidden" id="edit-index" value="">
+            
             <div class="form-group">
                 <label for="workout-date">Workout Date</label>
                 <input type="date" id="workout-date" required>
             </div>
+
             <div class="form-group">
                 <label for="exercise-name">Exercise Name</label>
                 <select id="exercise-name" required>
                     <option value="" disabled selected>Choose an exercise...</option>
+                    
                     <option value="" disabled style="font-weight: bold; color: var(--accent-blue);">--- Chest & Front Shoulders ---</option>
                     <option value="Machine Bench Press">Machine Bench Press</option>
                     <option value="Incline Machine Press">Incline Machine Press</option>
@@ -74,16 +240,19 @@
                     <option value="Machine Seated Shoulder Press">Machine Seated Shoulder Press</option>
                     <option value="Decline DB Pushups">Decline DB Pushups</option>
                     <option value="Dips / Bench Dips">Dips / Bench Dips</option>
+                    
                     <option value="" disabled style="font-weight: bold; color: var(--accent-blue);">--- Back & Rear Shoulders ---</option>
                     <option value="Underhand Pull-ups">Underhand Pull-ups</option>
                     <option value="Lat Cable Pulldowns">Lat Cable Pulldowns</option>
                     <option value="Seated Cable Rows">Seated Cable Rows</option>
                     <option value="Seated Machine Row">Seated Machine Row</option>
                     <option value="Face Pulls">Face Pulls</option>
+                    
                     <option value="" disabled style="font-weight: bold; color: var(--accent-blue);">--- Arms & Lateral Shoulders ---</option>
                     <option value="Seated DB Lateral Raises">Seated DB Lateral Raises</option>
                     <option value="Incline Bench DB Bicep Curls">Incline Bench DB Bicep Curls</option>
                     <option value="Standing Overhead Tricep Pulldowns">Standing Overhead Tricep Pulldowns</option>
+                    
                     <option value="" disabled style="font-weight: bold; color: var(--accent-blue);">--- Legs & Glutes ---</option>
                     <option value="Smith Machine Squats">Smith Machine Squats</option>
                     <option value="One-legged Bench Lunges">One-legged Bench Lunges</option>
@@ -94,15 +263,18 @@
                     <option value="Machine Hip Thrusts">Machine Hip Thrusts</option>
                     <option value="Standing Calf Raises">Standing Calf Raises</option>
                     <option value="Seated Calf Raises">Seated Calf Raises</option>
+                    
                     <option value="" disabled style="font-weight: bold; color: var(--accent-blue);">--- Core & Conditioning ---</option>
                     <option value="Ab Super Set">Ab Super Set</option>
                     <option value="Zone 2 Elliptical">Zone 2 Elliptical</option>
                 </select>
             </div>
+
             <div class="form-group">
                 <label for="weight">Weight (lbs) / Assistance / BW</label>
                 <input type="text" id="weight" placeholder="e.g. 155, BW, -30" required>
             </div>
+
             <div class="set-row">
                 <div class="form-group">
                     <label for="sets">Completed Sets</label>
@@ -113,6 +285,7 @@
                     <input type="text" id="reps" placeholder="e.g. 10/10/8" required>
                 </div>
             </div>
+
             <div class="form-group">
                 <label for="assessment">Assessment / Feel of Set 3</label>
                 <select id="assessment" required>
@@ -122,26 +295,40 @@
                     <option value="Struggle / Form Break">⚠️ Struggle (Losing form / Had to drop weight)</option>
                 </select>
             </div>
+
             <div class="form-group">
                 <label for="notes">Notes / Observations</label>
                 <textarea id="notes" rows="2" placeholder="e.g. Lost balance slightly on rep 8; felt awesome pump"></textarea>
             </div>
+
             <button type="submit" id="submit-btn" class="btn btn-green">Save Entry</button>
             <button type="button" id="cancel-edit-btn" class="btn btn-outline" style="display: none; margin-top: 8px;" onclick="cancelEdit()">Cancel Edit</button>
         </form>
     </div>
+
+    <!-- LOG HISTORY -->
     <div class="card">
         <div class="flex-container" style="margin-bottom: 12px;">
             <h2>Workout History</h2>
             <button class="btn btn-red btn-small" onclick="clearLogs()">Reset All</button>
         </div>
+        
         <div class="action-buttons" style="margin-bottom: 16px;">
             <button class="btn btn-blue btn-outline" onclick="exportToCSV()">📥 Download Spreadsheet (.CSV)</button>
         </div>
+
+        <!-- NEW INTEGRATED BACKUP UTILITY FOR iOS -->
+        <div id="backup-box" class="backup-container">
+            <label style="color: var(--accent-blue); font-size: 0.8rem;">📋 iOS Backup Area (Copy & paste directly into Notes app):</label>
+            <textarea id="backup-text" readonly rows="6" style="font-family: monospace; font-size: 0.8rem; margin-top: 6px; background-color: var(--bg-secondary);"></textarea>
+            <button class="btn btn-blue btn-small" style="margin-top: 8px; width: 100%;" onclick="copyBackupText()">Copy Text to Clipboard</button>
+        </div>
+
         <div id="logs-container">
             <p style="color: var(--text-muted); text-align: center; padding: 20px;">No workouts logged yet. Your entries will show up here.</p>
         </div>
     </div>
+
     <script>
         const workoutForm = document.getElementById('workout-form');
         const logsContainer = document.getElementById('logs-container');
@@ -150,6 +337,9 @@
         const cancelEditBtn = document.getElementById('cancel-edit-btn');
         const editIndexInput = document.getElementById('edit-index');
         const dateInput = document.getElementById('workout-date');
+        const backupBox = document.getElementById('backup-box');
+        const backupText = document.getElementById('backup-text');
+
         let logs = JSON.parse(localStorage.getItem('gemini_logs')) || [];
 
         function setTodayDate() {
@@ -191,8 +381,10 @@
                 logsContainer.innerHTML = '<p style="color: var(--text-muted); text-align: center; padding: 20px;">No workouts logged yet. Your entries will show up here.</p>';
                 return;
             }
+
             const logsWithIndex = logs.map((log, originalIndex) => ({ ...log, originalIndex }));
             logsWithIndex.sort((a, b) => new Date(b.rawDate) - new Date(a.rawDate));
+
             logsContainer.innerHTML = logsWithIndex.map(log => `
                 <div class="history-item">
                     <div class="flex-container">
@@ -213,6 +405,7 @@
 
         workoutForm.addEventListener('submit', function(e) {
             e.preventDefault();
+
             const rawDate = dateInput.value;
             const exercise = document.getElementById('exercise-name').value;
             const weight = document.getElementById('weight').value;
@@ -221,14 +414,21 @@
             const assessment = document.getElementById('assessment').value;
             const notes = document.getElementById('notes').value;
             const editIndex = editIndexInput.value;
+
             if (editIndex !== "") {
                 logs[editIndex] = { rawDate, exercise, weight, sets, reps, assessment, notes };
                 cancelEdit(); 
             } else {
                 logs.push({ rawDate, exercise, weight, sets, reps, assessment, notes });
             }
+
             saveToStorage();
-            workoutForm.reset();
+            
+            document.getElementById('weight').value = '';
+            document.getElementById('reps').value = '';
+            document.getElementById('notes').value = '';
+            document.getElementById('exercise-name').selectedIndex = 0;
+            document.getElementById('assessment').selectedIndex = 0;
             setTodayDate();
         });
 
@@ -241,12 +441,14 @@
             document.getElementById('reps').value = log.reps;
             document.getElementById('assessment').value = log.assessment;
             document.getElementById('notes').value = log.notes || '';
+            
             editIndexInput.value = index;
             formTitle.textContent = "✏️ Edit Exercise Entry";
             formTitle.style.color = "var(--accent-blue)";
             submitBtn.textContent = "Update Entry";
             submitBtn.className = "btn btn-blue";
             cancelEditBtn.style.display = "block";
+            
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
@@ -276,13 +478,15 @@
                 alert("You have no entries to download.");
                 return;
             }
-            let csvContent = "data:text/csv;charset=utf-8,Date,Exercise,Weight (lbs),Sets,Reps,Assessment,Notes\n";
+
+            let csvContent = "Date,Exercise,Weight (lbs),Sets,Reps,Assessment,Notes\n";
             const sortedLogs = [...logs].sort((a, b) => new Date(b.rawDate) - new Date(a.rawDate));
+
             sortedLogs.forEach(log => {
-                // FIX: Enclose fields that might contain commas or special characters in quotes
                 const escapedDate = `"${formatFriendlyDate(log.rawDate)}"`;
                 const escapedExercise = `"${log.exercise}"`;
-                const escapedReps = `"${log.reps}"`;
+                const formattedReps = log.reps.replace(/\//g, '-');
+                const escapedReps = `"${formattedReps}"`;
                 const escapedAssessment = `"${log.assessment}"`;
                 const escapedNotes = log.notes ? `"${log.notes.replace(/"/g, '""')}"` : "";
                 
@@ -298,13 +502,30 @@
                 csvContent += row + "\n";
             });
 
-            const encodedUri = encodeURI(csvContent);
-            const link = document.createElement("a");
-            link.setAttribute("href", encodedUri);
-            link.setAttribute("download", `gemini_workout_history_${new Date().toISOString().slice(0,10)}.csv`);
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
+            // Populate text-area backup box for iOS Home-Screen Web Apps
+            backupText.value = csvContent;
+            backupBox.style.display = "block";
+
+            // Normal browser fallback file generator
+            try {
+                const blob = new Blob([csvContent], { type: 'application/octet-stream;charset=utf-8;' });
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement("a");
+                link.setAttribute("href", url);
+                link.setAttribute("download", `gemini_workout_history.csv`);
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            } catch (err) {
+                console.log("Direct download failed. Displaying raw data.");
+            }
+        }
+
+        window.copyBackupText = function() {
+            backupText.select();
+            backupText.setSelectionRange(0, 99999); // For mobile devices
+            navigator.clipboard.writeText(backupText.value);
+            alert("Workout data copied to clipboard! Open your Notes app and paste.");
         }
 
         function clearLogs() {
@@ -312,6 +533,7 @@
                 logs = [];
                 saveToStorage();
                 cancelEdit();
+                backupBox.style.display = "none";
             }
         }
 
